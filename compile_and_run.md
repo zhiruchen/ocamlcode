@@ -38,8 +38,18 @@ hello.byte: a /Users/x/.opam/4.06.0/bin/ocamlrun script executable (binary data)
 
 ## clean build
 
-```
+```bash
 ocamlbuild -clean
 Finished, 0 targets (0 cached) in 00:00:00.
 00:00:00 0    (0   ) STARTING
+```
+
+## Load code from file
+
+```bash
+utop # #use "inc.ml";;
+val inc : int -> int = <fun>
+─( 10:30:48 )─< command 1 >────────────────────────────────────────────────────────{ counter: 0 }─
+utop # inc 1;;
+- : int = 2
 ```
